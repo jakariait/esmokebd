@@ -38,7 +38,7 @@ export default function NewsletterForm() {
       />
       <button
         type="submit"
-        className="w-full primaryBgColor accentTextColor p-3 mt-5 hover:bg-green-600 transition cursor-pointer"
+        className="w-full secondaryBgColor accentTextColor p-3 mt-5 hover:bg-green-600 transition cursor-pointer"
         disabled={isLoading}
       >
         {isLoading ? "Subscribing..." : "Subscribe"}

@@ -54,7 +54,7 @@ const Footer = () => {
         </>
       ) : (
         <>
-          <div className={"secondaryBgColor accentTextColor  "}>
+          <div className={"primaryBgColor accentTextColor  "}>
             {" "}
             {/*Mobile Footer*/}
             <div className={" lg:hidden px-0 py-3"}>
@@ -182,37 +182,37 @@ const Footer = () => {
                   <span className="absolute left-0 top-6 w-15 border-b-2 border-gray-300 mt-1"></span>
                 </h1>
                 <ul>
-                  <Link to="/about" className={"hover:primaryTextColor"}>
+                  <Link to="/about" className={"hover:secondaryTextColor"}>
                     <li>About</li>
                   </Link>
-                  <Link to="/blog" className={"hover:primaryTextColor"}>
+                  <Link to="/blog" className={"hover:secondaryTextColor"}>
                     <li>Blog</li>
                   </Link>
-                  <Link to="/contact-us" className={"hover:primaryTextColor"}>
+                  <Link to="/contact-us" className={"hover:secondaryTextColor"}>
                     <li>Contact</li>
                   </Link>
                   <Link
                     to="/termofservice"
-                    className={"hover:primaryTextColor"}
+                    className={"hover:secondaryTextColor"}
                   >
                     <li>Terms of Services</li>
                   </Link>
                   <Link
                     to="/privacypolicy"
-                    className={"hover:primaryTextColor"}
+                    className={"hover:secondaryTextColor"}
                   >
                     <li>Privacy Policy</li>
                   </Link>
-                  <Link to="/refundpolicy" className={"hover:primaryTextColor"}>
+                  <Link to="/refundpolicy" className={"hover:secondaryTextColor"}>
                     <li>Refund Policy</li>
                   </Link>
                   <Link
                     to="/shippinpolicy"
-                    className={"hover:primaryTextColor"}
+                    className={"hover:secondaryTextColor"}
                   >
                     <li>Shipping Policy</li>
                   </Link>
-                  <li className={"hover:primaryTextColor"}>
+                  <li className={"hover:secondaryTextColor"}>
                     <Link to="/faqs">FAQ</Link>
                   </li>
                 </ul>
@@ -242,7 +242,7 @@ const Footer = () => {
                 Design and Developed by{" "}
                 <a
                   href="https://www.digiweb.digital/"
-                  className={"text-red-500 hover:underline"}
+                  className={"text-black hover:underline"}
                 >
                   DigiWeb
                 </a>

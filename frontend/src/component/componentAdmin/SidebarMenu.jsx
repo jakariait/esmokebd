@@ -748,7 +748,7 @@ export default function SidebarMenu() {
       {/* Logout and Others */}
       <div>
         <ul>
-          <li className="flex items-center space-x-2 p-2 rounded-md text-red-500 cursor-pointer">
+          <li className="flex items-center space-x-2 p-2 rounded-md accentTextColor cursor-pointer">
             <button
               onClick={handleLogout}
               className={"flex items-center space-x-2 cursor-pointer"}

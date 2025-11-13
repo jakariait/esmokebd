@@ -7,10 +7,10 @@
   font-style: normal;
 }
 :root {
-  --primaryColor: #00395d;
+  --primaryColor: #FF2B85;
   --secondaryColor: #000000;
-  --tertiaryColor: #b6d7a8;
-  --accentColor: #eeeeee;
+  --tertiaryColor: #000000;
+  --accentColor: #faffff;
 }
 /* Using CSS variables for custom classes */
 .primaryBgColor {
