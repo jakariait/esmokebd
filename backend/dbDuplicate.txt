@@ -1,0 +1,23 @@
+// Replace these with your values
+const sourceDB = 'yourSourceDB';
+const targetDB = 'yourTargetDB';
+
+const collections = db.getSiblingDB(sourceDB).getCollectionNames();
+
+collections.forEach((collName) => {
+  const sourceColl = db.getSiblingDB(sourceDB).getCollection(collName);
+  const targetColl = db.getSiblingDB(targetDB).getCollection(collName);
+
+  print(`Cloning ${collName}...`);
+
+  const docs = sourceColl.find().toArray();
+
+  if (docs.length > 0) {
+    targetColl.insertMany(docs);
+    print(`→ Copied ${docs.length} documents.`);
+  } else {
+    print(`→ Skipped ${collName} (empty collection).`);
+  }
+});
+
+print('✅ Database duplication completed.');

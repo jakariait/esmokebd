@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --primaryColor: #00395d;
+  --secondaryColor: #000000;
+  --tertiaryColor: #b6d7a8;
+  --accentColor: #eeeeee;
+}
+/* Using CSS variables for custom classes */
+.primaryBgColor {
+  background-color: var(--primaryColor);
+}
+
+.secondaryBgColor {
+  background-color: var(--secondaryColor);
+}
+
+.tertiaryBgColor {
+  background-color: var(--tertiaryColor);
+}
+
+.accentBgColor {
+  background-color: var(--accentColor);
+}
+.primaryTextColor {
+  color: var(--primaryColor);
+}
+.secondaryTextColor {
+  color: var(--secondaryColor);
+}
+.tertiaryTextColor {
+  color: var(--tertiaryColor);
+}
+.accentTextColor {
+  color: var(--accentColor);
+}
+
+/* Use the custom color variable in Tailwind classes */
+.hover\:primaryTextColor:hover {
+  color: var(--primaryColor);
+}
+.hover\:secondaryTextColor:hover {
+  color: var(--secondaryColor);
+}
+.hover\:tertiaryTextColor:hover {
+  color: var(--tertiaryColor);
+}
+.hover\:accentTextColor:hover {
+  color: var(--accentColor);
+}
+.hover\:tertiaryTextColor:hover {
+  color: var(--tertiaryColor);
+}
+
+.primaryBorderColor {
+  border-color: var(--primaryColor);
+}
+.primaryRingColor {
+  outline: none;
+  box-shadow: var(--primaryColor);
+}
+
+.primaryAccentColor {
+  accent-color: var(--primaryColor);
+}
+
+.rendered-html {
+  @apply text-gray-800 leading-relaxed;
+}
+
+.rendered-html ul {
+  @apply list-disc list-inside pl-4 mb-2;
+}
+
+.rendered-html ol {
+  @apply list-decimal list-inside pl-4 mb-2;
+}
+
+.rendered-html li {
+  @apply mb-1;
+}
+
+.rendered-html h1 {
+  @apply text-2xl font-bold mt-4 mb-2;
+}
+
+.rendered-html h2 {
+  @apply text-xl font-semibold mt-4 mb-2;
+}
+
+.rendered-html p {
+  @apply mb-2;
+}
+
+/* Quill alignment fixes */
+.rendered-html .ql-align-center {
+  text-align: center;
+}
+.rendered-html .ql-align-right {
+  text-align: right;
+}
+.rendered-html .ql-align-justify {
+  text-align: justify;
+}
+.rendered-html .ql-align-left {
+  text-align: left; /* optional, usually default */
+}
+
+.rendered-html strong {
+  @apply font-semibold;
+}
+
+.rendered-html em {
+  @apply italic;
+}
+
+.rendered-html a {
+  color: var(--primaryColor);
+}
+
+.rendered-html .ql-font-serif {
+  @apply font-serif;
+}
+
+.rendered-html .ql-font-monospace {
+  @apply font-mono;
+}
+.rendered-html table tr td {
+  @apply border p-2 border-gray-300 rounded-md;
+}
+
+.rendered-html .ql-code-block-container {
+  background-color: var(--primaryColor);
+  color: var(--accentColor);
+  padding: 10px;
+}
+
+.rendered-html img {
+  @apply py-3;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-track {
+  animation: scrollMarquee 35s linear infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-5px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling globally */
+}
+
+
