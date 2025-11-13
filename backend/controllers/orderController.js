@@ -201,12 +201,10 @@ const trackOrderByOrderNoAndPhone = async (req, res) => {
     const { orderNo, phone } = req.body;
 
     if (!orderNo || !phone) {
-      return res
-        .status(400)
-        .json({
-          success: false,
-          message: "Order number and phone are required",
-        });
+      return res.status(400).json({
+        success: false,
+        message: "Order number and phone are required",
+      });
     }
 
     const order = await orderService.trackOrderByOrderNoAndPhone(
