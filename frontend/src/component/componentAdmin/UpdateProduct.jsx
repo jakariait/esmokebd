@@ -579,16 +579,16 @@ const UpdateProduct = () => {
                 style={{ height: "260px" }}
               />
             </div>
-            {/* Size Chart */}
-            <div>
-              <h1 className={"py-3 pl-1"}>Size Chart</h1>
+            {/*/!* Size Chart *!/*/}
+            {/*<div>*/}
+            {/*  <h1 className={"py-3 pl-1"}>Size Chart</h1>*/}
 
-              <Editor
-                value={sizeChart}
-                onTextChange={(e) => setSizeChart(e.htmlValue)}
-                style={{ height: "260px" }}
-              />
-            </div>
+            {/*  <Editor*/}
+            {/*    value={sizeChart}*/}
+            {/*    onTextChange={(e) => setSizeChart(e.htmlValue)}*/}
+            {/*    style={{ height: "260px" }}*/}
+            {/*  />*/}
+            {/*</div>*/}
 
             {/* Shipping and Return */}
             <div>
@@ -801,15 +801,15 @@ const UpdateProduct = () => {
               onChange={handleRewardPointsChange}
               margin="normal"
             />
-            {/* Purchase Price */}
-            <TextField
-              label="Purchase Price"
-              type="number"
-              fullWidth
-              value={purchasePrice}
-              onChange={handlePurchasePriceChange}
-              margin="normal"
-            />
+            {/*/!* Purchase Price *!/*/}
+            {/*<TextField*/}
+            {/*  label="Purchase Price"*/}
+            {/*  type="number"*/}
+            {/*  fullWidth*/}
+            {/*  value={purchasePrice}*/}
+            {/*  onChange={handlePurchasePriceChange}*/}
+            {/*  margin="normal"*/}
+            {/*/>*/}
             {/* Product Code */}
             <TextField
               label="Product Code"

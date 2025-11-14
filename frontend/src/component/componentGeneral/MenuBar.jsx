@@ -39,7 +39,7 @@ const MenuBar = () => {
   return (
     <div className="lg:shadow lg:bg-white">
       <nav className="p-3 xl:container xl:mx-auto">
-        <ul className="lg:flex space-x-3">
+        <ul className="lg:flex ">
           <MenuItem
             label={
               <Link to="/" className="block">
@@ -76,7 +76,7 @@ const MenuBar = () => {
                     label={
                       <Link
                         to={categoryPath}
-                        className="grid grid-cols-2 gap-1 items-center justify-center w-full text-left"
+                        className=" "
                         onClick={(e) => {
                           // Prevent navigation if already on this category
                           if (isCurrentRoute(categoryQuery)) {
@@ -194,7 +194,7 @@ const MenuItem = memo(({ label, children }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="px-4 py-2 text-gray-800 font-semibold cursor-pointer">
+      <div className="px-2 py-2 text-gray-800 font-semibold cursor-pointer">
         {label}
       </div>
 

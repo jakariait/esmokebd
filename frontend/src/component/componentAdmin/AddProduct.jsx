@@ -8,7 +8,6 @@ import AuthAdminStore from "../../store/AuthAdminStore.js";
 import { Editor } from "primereact/editor";
 import { useNavigate } from "react-router-dom";
 
-
 import {
   Box,
   MenuItem,
@@ -46,7 +45,6 @@ const AddProduct = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
   const { token } = AuthAdminStore();
   const navigate = useNavigate();
-
 
   // Local state for selected category, subcategory, and child category
   const [name, setName] = useState("");
@@ -419,7 +417,6 @@ const AddProduct = () => {
       setTimeout(() => {
         navigate("/admin/viewallproducts");
       }, 3000);
-
     } catch (error) {
       // Error handling: show error Snackbar
       setSnackbarMessage("Failed to create product. Please try again.");
@@ -471,16 +468,16 @@ const AddProduct = () => {
               onTextChange={(e) => setLongDesc(e.htmlValue)}
               style={{ height: "260px" }}
             />
-            {/* Size Chart */}
-            <div>
-              <h1 className={"py-3 pl-1"}>Size Chart</h1>
+            {/*/!* Size Chart *!/*/}
+            {/*<div>*/}
+            {/*  <h1 className={"py-3 pl-1"}>Size Chart</h1>*/}
 
-              <Editor
-                value={sizeChart}
-                onTextChange={(e) => setSizeChart(e.htmlValue)}
-                style={{ height: "260px" }}
-              />
-            </div>
+            {/*  <Editor*/}
+            {/*    value={sizeChart}*/}
+            {/*    onTextChange={(e) => setSizeChart(e.htmlValue)}*/}
+            {/*    style={{ height: "260px" }}*/}
+            {/*  />*/}
+            {/*</div>*/}
             {/* Shipping and Return */}
             <div>
               <h1 className={"py-3 pl-1"}>Shipping and Return</h1>
@@ -670,15 +667,15 @@ const AddProduct = () => {
               onChange={handleRewardPointsChange}
               margin="normal"
             />
-            {/* Purchase Price */}
-            <TextField
-              label="Purchase Price"
-              type="number" // Make it a number input
-              fullWidth
-              value={purchasePrice}
-              onChange={handlePurchasePriceChange}
-              margin="normal"
-            />
+            {/*/!* Purchase Price *!/*/}
+            {/*<TextField*/}
+            {/*  label="Purchase Price"*/}
+            {/*  type="number" // Make it a number input*/}
+            {/*  fullWidth*/}
+            {/*  value={purchasePrice}*/}
+            {/*  onChange={handlePurchasePriceChange}*/}
+            {/*  margin="normal"*/}
+            {/*/>*/}
             {/* Product Code */}
             <TextField
               label="Product Code"

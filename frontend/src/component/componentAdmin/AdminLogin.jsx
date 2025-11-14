@@ -63,17 +63,6 @@ const AdminLogin = () => {
           Enter your email address and password to access admin panel.
         </h2>
 
-        {/*Demo Access*/}
-        <div className="bg-yellow-100 text-yellow-800 p-4 rounded-md shadow-md text-sm flex flex-col items-center justify-center mb-5">
-          <p className={"mb-3"}>Use this to explore our admin panel.</p>
-          <p>
-            <strong>Email:</strong> admin@gmail.com
-          </p>
-          <p>
-            <strong>Password:</strong> admin
-          </p>
-        </div>
-
         {error && (
           <p className="mb-4 rounded-md bg-red-200 p-2 text-sm text-red-700">
             {error}

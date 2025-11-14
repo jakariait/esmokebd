@@ -38,7 +38,17 @@ const createOrder = async (req, res) => {
       await user.save();
     }
 
+    // Populate product details to get product names
+    await order.populate("items.productId", "name");
+
     // Send Telegram message
+    const productList = order.items
+      .map(
+        (item) =>
+          `- ${item.productId.name} (Qty: ${item.quantity}, Price: ${item.price})`,
+      )
+      .join("\n");
+
     const message = `
       New Order Received!
       -------------------
@@ -46,6 +56,10 @@ const createOrder = async (req, res) => {
       Total Amount: ${order.totalAmount}
       Customer Name: ${order.shippingInfo.fullName}
       Phone: ${order.shippingInfo.mobileNo}
+      Address: ${order.shippingInfo.address}
+
+      Products:
+      ${productList}
     `;
 
     await sendTelegramMessage(message);

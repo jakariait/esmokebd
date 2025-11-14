@@ -352,36 +352,36 @@ const ProductDetails = () => {
               </Accordion>
             )}
             {/*Product Size Chart*/}
-            {product.sizeChart && (
-              <Accordion
-                style={{
-                  background: "transparent",
-                  boxShadow: "none",
-                  width: "100%",
-                }}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                  className="p-2 flex items-center"
-                >
-                  <Typography component="span">
-                    <div className="flex items-center gap-2">
-                      <span>Size Chart</span>
-                    </div>
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <div
-                    className="rendered-html"
-                    dangerouslySetInnerHTML={{
-                      __html: cleanHtml(product.sizeChart),
-                    }}
-                  />
-                </AccordionDetails>
-              </Accordion>
-            )}
+            {/*{product.sizeChart && (*/}
+            {/*  <Accordion*/}
+            {/*    style={{*/}
+            {/*      background: "transparent",*/}
+            {/*      boxShadow: "none",*/}
+            {/*      width: "100%",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <AccordionSummary*/}
+            {/*      expandIcon={<ExpandMoreIcon />}*/}
+            {/*      aria-controls="panel1-content"*/}
+            {/*      id="panel1-header"*/}
+            {/*      className="p-2 flex items-center"*/}
+            {/*    >*/}
+            {/*      <Typography component="span">*/}
+            {/*        <div className="flex items-center gap-2">*/}
+            {/*          <span>Size Chart</span>*/}
+            {/*        </div>*/}
+            {/*      </Typography>*/}
+            {/*    </AccordionSummary>*/}
+            {/*    <AccordionDetails>*/}
+            {/*      <div*/}
+            {/*        className="rendered-html"*/}
+            {/*        dangerouslySetInnerHTML={{*/}
+            {/*          __html: cleanHtml(product.sizeChart),*/}
+            {/*        }}*/}
+            {/*      />*/}
+            {/*    </AccordionDetails>*/}
+            {/*  </Accordion>*/}
+            {/*)}*/}
 
             {/*Shipping and Return*/}
             {product.shippingReturn && (
