@@ -302,10 +302,12 @@ const Checkout = () => {
               vatPercentage={vatPercentage}
             />
             <button
-              className={
-                "primaryBgColor accentTextColor px-4 py-2 w-full rounded-lg cursor-pointer"
-              }
-              disabled={isProcessingOrder}
+              className={`primaryBgColor accentTextColor px-4 py-2 w-full rounded-lg ${
+                isProcessingOrder || cart.length === 0
+                  ? "cursor-not-allowed opacity-50"
+                  : "cursor-pointer"
+              }`}
+              disabled={isProcessingOrder || cart.length === 0}
             >
               {paymentMethod === "cash_on_delivery"
                 ? "Place Order (Cash on Delivery)"

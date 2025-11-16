@@ -14,6 +14,11 @@ const Feature = () => {
       </div>
     ); // Display error message
   }
+
+  if (!FeatureStoreListLoading && FeatureStoreList.length === 0) {
+    return null;
+  }
+
   return (
     <div className="xl:container xl:mx-auto pb-6 px-3">
       {FeatureStoreListLoading ? (
