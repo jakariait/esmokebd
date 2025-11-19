@@ -22,10 +22,7 @@ const __dirname = dirname(__filename);
 dotenv.config();
 
 // Connect to MongoDB
-await mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+await mongoose.connect(process.env.MONGO_URI);
 
 // Collect used images
 const usedImages = new Set();

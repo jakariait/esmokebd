@@ -5,7 +5,6 @@ const express = require("express");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
-const xss = require("xss-clean");
 const hpp = require("hpp");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -35,7 +34,6 @@ mongoose
 const clientUrl = process.env.CLIENT_URL
   ? process.env.CLIENT_URL.split(",").map((url) => url.replace(/\/$/, ""))
   : [];
-
 
 // CORS setup
 const corsOptions = {
@@ -68,7 +66,6 @@ app.use(helmet());
 
 // Security middleware to sanitize data and prevent common attacks
 app.use(mongoSanitize()); // MongoDB query injection prevention
-app.use(xss()); // XSS (cross-site scripting) prevention
 app.use(hpp()); // HTTP Parameter Pollution protection
 
 // Body parsers for handling large payloads and URL-encoded data
